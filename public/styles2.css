@@ -1,0 +1,368 @@
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+      background-color:red;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .circle-wrapper {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+      footer {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background:linear-gradient(90deg,#550404, #4b0808);
+  padding: 4px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 80px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Platform colors */
+.social-icons a.youtube i {
+   color: #FF0000; 
+   font-size: 30px;
+   border: 1px solid rgb(255, 0, 0);
+
+} 
+.social-icons a.telegram i { 
+  color: #0088cc; 
+   font-size: 30px;
+    border: 1px solid rgb(54, 17, 219);
+}  
+.social-icons a.whatsapp i { 
+  color: #25D366;
+   font-size: 30px;
+    border: 1px solid rgb(60, 233, 25);
+ } 
+
+/* Hover effect */
+.social-icons a:hover i {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px currentColor;
+}
+   
+    .circle-border {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 8px solid transparent;
+      border-top: 8px solid  rgb(98, 3, 3);
+      border-right: 8px solid rgb(207, 100, 100);
+      border-bottom: 8px solid  rgb(98, 3, 3);
+      border-left: 8px solid rgb(207, 100, 100);
+      animation: spin 5s linear infinite; 
+    }
+
+   
+    .circle-inner {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgb(245, 10, 10), rgba(248, 243, 243, 0.4));
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(255,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: spinReverse 0.8s linear infinite; 
+    }
+
+
+    .circle-text {
+      position: absolute;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+ 
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: linear-gradient(45deg, red, white);
+      color: #111;
+      transition: 0.3s;
+      margin-bottom: 30px;
+    }
+
+
+
+    button:hover {
+      background: linear-gradient(45deg, white, red);
+      color: black;
+    }
+
+  
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes spinReverse {
+      from { transform: rotate(360deg); }
+      to   { transform: rotate(0deg); }
+    }
+
+    
+    
+
+img{
+    height:170px;
+    padding-bottom: 20px;
+    width: 260px;
+        
+    }
+
+    
+    
+#layoutPop {
+    display: none;
+}
+
+#headText {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 30px;
+    
+}
+
+.timeOnline {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    
+
+
+}
+.rules {
+    position: fixed;
+    left: 20px;
+    top: 12px;
+
+}
+
+
+.rules {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(45deg, rgb(192, 26, 26), white);
+  color: red;
+  cursor: pointer;
+}
+
+
+.popup-overlay {
+  display: none; 
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); 
+  display: flex;
+  
+  
+  z-index: 1000;
+}
+
+
+.popup-content {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px); 
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,0,0,0.5);
+  text-align: center;
+}
+
+
+.token {
+  color: rgb(175, 103, 103);
+  font-weight: bold;
+  font-size:24px;
+  filter: blur(5px);
+  transition: filter 0.3s;
+}
+
+.eye-btn {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.locked-input {
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: #0ff;
+  background-color: #111;
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+
+  cursor: not-allowed;
+}
+
+.locked-input:focus {
+  border-color: #0ff;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+.popup-content {
+  background: #111;
+  color: red;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #0ff;
+  text-align: left;
+  width: 90%;
+  max-width: 400px;
+  font-family: monospace;
+  animation: popupFade 0.5s ease-in-out;
+}
+
+.popup-content h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: red;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.popup-content p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: whites;
+  text-shadow: 0 0 1px #0ff;
+}
+
+.popup-content .warning {
+  color: rgb(33, 138, 208);
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 5px #ff3b3b;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@keyframes popupFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.account {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(45deg, rgb(231, 9, 49), skyblue);
+  color: white;
+  cursor: pointer;
+}
+
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.popup-content {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px red;
+}
+
+
+.profile-pic {
+  margin: 15px 0;
+}
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+.profile-pic input {
+  display: block;
+  margin: 0 auto;
+  color: white;
+}
+
+
+.footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+

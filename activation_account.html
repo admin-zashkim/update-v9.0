@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Aviator Predictor V9.0</title>
+  <link rel="stylesheet" href="public/activation_account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="images/images.png">
+</head>
+<body>
+
+    <img id="logoMainImg" src="images/images.png" alt="logo" style="width: 180px; height: 180px; border-radius: 50%; border: 2px solid white; margin-top: 20px;position: absolute; top: 17%; display: none;">
+
+    <div id="loaderContainer" class="loader-container" style="display: none">
+         <div class="loader"></div>
+         <p id="loadingxxx">Processing you request please wait...</p>
+    </div>
+
+    <h1>AVIATOR PREDICTOR V9.0</h1>
+
+
+    <img id="cancleBtnMain" src="images/cancle.png" alt="close">
+
+<div class="activation">
+    <div class="image">
+        <img class="imgLock" src="images/passwordicon.jpeg" alt="lock image">
+    </div>
+ 
+    <h3 id="h4main">Account Activation</h3>
+
+    <div class="inputDiv">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" placeholder="Full Names">
+        <label for="emailInput">Email:</label>
+        <input type="email" id="emailInput" placeholder="user@gmail.com">
+        <label for="image">Select Profile:</label>
+        <input type="file" id="image" accept="image/*">
+        <p id="errorP"></p>
+    </div>
+
+    <input type="submit" id="activateBtn" value="Activate Account">
+
+    <p id="redirectVaultBox" style="text-align: left; color: rgb(0, 16, 245); font-family: sans-serif; margin-left: 10px; text-decoration: underline;">
+        Already have an account?
+    </p>
+</div>
+
+<div id="accountPopup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+        <h3>My Account</h3>
+       <div class="profile-pic" style="display:flex; justify-content:center; align-items:center;">
+    <img id="displayImage" src="/images/profilepic.jpeg" alt="image" 
+         style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #0ff;">
+</div>
+        <p><b>Account Name:</b> 
+            <input type="text" id="displayName" readonly class="locked-input">
+        </p>
+   <p><b>Status A/C:</b> <input type="text" value=" Online 🟢 " readonly class="locked-input" style="text-align: center;"></p>
+        <p><b>Registered:</b> <input type="text" value=" - - - " readonly class="locked-input" style="text-align: center;"></p>
+        <p><b>ADMIN CONTACT:</b> <input type="text" value="+254796182560" readonly class="locked-input" style="text-align: center;"></p>
+        
+        <h4>Confirm to activate account</h4>
+        <button id="closePopAccount">Register</button>
+    </div>
+</div>
+
+<div id="vaultBox" class="secure-container" style="display: none;">
+    <h3>Aviator Predictor V9.0</h3>
+    <div class="entry-wrapper">
+        <label id="xxxx" for="passEntry"> System Activation</label>
+        <input type="password" id="passEntry" placeholder="Enter Activation Code">
+        <p id="alertNotice"></p>
+    </div>
+    <button id="verifyAction">Verify Account</button>
+</div>
+
+<div class="buyIcon" id="groupDiv" style="display: none;">
+    <label style="color: white; font-family: sans-serif;">Join Group</label> <br>
+    <img class="groupNew" src="images/group.jpeg" alt="group">
+</div>
+
+<div class="buyIcon" id="adminDiv" style="display: none;">
+    <label style="color: white; font-family: sans-serif;">Chat Admin</label> <br>
+    <img class="adminNew" src="images/chat.jpeg" alt="admin">
+</div>
+
+
+
+<div class="buyIcon" id="buyDiv">
+    <label style="color: white; font-family: sans-serif;"> How Much?</label> <br>
+    <img class="imgNew" src="images/buyNew.png" alt="buy">
+</div>
+
+
+<div id="showPackage" class="package" style="display: none;">
+
+
+
+<div class="price-list-container">
+
+<div class="price-list">
+
+
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇧🇩</span> Bangladesh</div>
+
+<div class="price">3,000 BDT</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇧🇯</span> Benin</div>
+
+<div class="price"> 16,000 XOF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇧🇷</span> Brazil</div>
+
+<div class="price">200 BRL</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇧🇫</span> Burkina Faso</div>
+
+<div class="price">16,000 XOF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇧🇼</span> Botswana</div>
+
+<div class="price">450 BWP</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇨🇮</span> Côte d'Ivoire</div>
+
+<div class="price">16,000 XOF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇨🇲</span> Cameroon</div>
+
+<div class="price">16,000 XAF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇪🇹</span> Ethiopia</div>
+
+<div class="price">4,000 ETB</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇬🇭</span> Ghana</div>
+
+<div class="price">450 GHS</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇮🇳</span> India</div>
+
+<div class="price">2,500 INR</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇰🇪</span> Kenya</div>
+
+<div class="price">3,500 KSH</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇲🇱</span> Mali</div>
+
+<div class="price">16,000 XOF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇲🇿</span> Mozambique</div>
+
+<div class="price">1,800 MZN</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇳🇦</span> Namibia</div>
+
+<div class="price">450 NAD</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇳🇪</span> Niger</div>
+
+<div class="price">16,000 XOF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇳🇬</span> Nigeria</div>
+
+<div class="price">40,000 NGN</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇵🇰</span> Pakistan</div>
+
+<div class="price">7,000 PKR</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇵🇭</span> Philippines</div>
+
+<div class="price">1,800 PHP</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇷🇼</span> Rwanda</div>
+
+<div class="price">35,000 RWF</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇿🇦</span> South Africa</div>
+
+<div class="price">R450 ZAR</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇹🇿</span> Tanzania</div>
+
+<div class="price">65,000 TZS</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🇿🇲</span> Zambia</div>
+
+<div class="price">750 ZMW</div>
+
+</div>
+
+<div class="price-item">
+
+<div class="country"><span class="flag">🌍</span> Other Countries</div>
+
+<div class="price">$25 USD</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<footer>
+  <div class="social-icons">
+    <a href="https://www.youtube.com/@Aviator-Hackers" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me/legit_predictor1" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
+    <a href="https://chat.whatsapp.com/HVyxEZO6tGG7CrAiJrWu7T" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+
+<script type="module" src="/public/activation_account.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<script>
+
+
+
+const entryField = document.getElementById("passEntry");
+const actionBtn = document.getElementById("verifyAction");
+const noticeDisplay = document.getElementById("alertNotice");
+
+actionBtn.addEventListener("click", () => {
+    const userValue = entryField.value;
+    actionBtn.disabled = true; 
+    actionBtn.innerHTML = '<div class="btn-spinner"></div> Verifying...';
+    noticeDisplay.innerText = "Connecting to server...";
+    noticeDisplay.style.color = "yellow";
+
+    setTimeout(() => {
+        actionBtn.disabled = false;
+        actionBtn.innerText = "Verify Account";
+        if (userValue === MASTER_KEY && userValue.trim() != "") {
+            noticeDisplay.innerText = "CORRECT CODE";
+            noticeDisplay.style.color = "#00ff00";
+
+            // Final storage check
+            localStorage.setItem("userName", nameInput.value);
+
+            
+            setTimeout(() => {
+                window.location.href = "after site login redirect.html";
+            }, 3000);
+        } else {
+            noticeDisplay.innerText = "WRONG CODE - TRY AGAIN";
+            noticeDisplay.style.backgroundColor = "red";
+            entryField.value = ""; 
+        }
+    }, 4000); 
+});
+
+</script>

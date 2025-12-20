@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviator Predictor V9.0</title>
+  <link rel="stylesheet" href="/public/after new.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="images/images.png">
+</head>
+<body>
+    <header id="headText">
+         <div class="container">
+              <button class="timeOnline" id="timeButton" style="color: black;"> </button>
+              <button class="rules" onclick="toggleRules()">Rules</button>
+
+              <div id="rulesPopup" class="popup-overlay">
+                <div class="popup-content">
+                  <h3>Game Rules</h3>
+                  <p>1. Maximum Usage per day: 10 hours</p>
+                  <p>2. DO NOT share activation code</p>
+                  <p>3. Use the Aviator Predictor mostly at night hours</p>
+                  <p>4. Find at least 3 Accounts on your betting platform</p>
+                  <p class="warning">FOLLOW RULE 3 and 4 TO PREVENT AVIATOR OFFICIALS NOTICE</p>
+                  <button onclick="toggleRules()">Close</button>
+                </div>
+              </div>
+         </div>
+    </header>
+
+    <h1>AVIATOR PREDICTOR V9.0</h1>
+
+    <img src="images/images.png" alt="logo">
+    <button class="account" onclick="toggleAccount()">MY ACCOUNT</button>
+
+    <div id="accountPopup" class="popup-overlay" style="display: flex;">
+      <div class="popup-content">
+        <h3>My Account</h3>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:20px;">
+         <div style="display:flex; justify-content:center; align-items:center; margin-top:20px; margin-bottom:20px;">
+  <div id="profilePic" style="width:100px; height:100px; border-radius:50%; 
+                              background:#222; border:2px solid #0ff; 
+                              overflow:hidden; display:flex; align-items:center; 
+                              justify-content:center; box-shadow:0 0 10px #0ff;">
+    
+    <img id="preview" style="display:none; width:100%; height:100%; object-fit:cover;">
+    
+    <span id="placeholder" style="color:#00ff99; font-size:12px; text-align:center;">📸 No Picture</span>
+  </div>
+</div>
+        </div>
+
+        <p><b>Account Name:</b> 
+            <input type="text" id="displayUserName" readonly class="locked-input" style="text-align: center;">
+        </p>
+        <p><b>Status A/C:</b> <input type="text" value=" Online 🟢 " readonly class="locked-input" style="text-align: center;"></p>
+        <p><b>Registered:</b> <input type="text" value=" 20/12/25 " readonly class="locked-input" style="text-align: center;"></p>
+        <p><b>ADMIN CONTACT:</b> <input type="text" value="+254796182560" readonly class="locked-input" style="text-align: center;"></p>
+        
+        <button onclick="toggleAccount()">Close</button>
+      </div>
+    </div>
+
+    <div class="circle-wrapper">
+      <div class="circle-border" id="circleBorder"></div>
+      <div class="circle-inner" id="circleInner"></div>
+      <div class="circle-text" id="circleText">START</div>
+    </div>
+    <button onclick="boostSpin()">Start Signal</button>
+
+
+    <footer>
+  <div class="social-icons">
+    <a href="https://www.youtube.com/@Aviator-Hackers" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="https://t.me/legit_predictor1" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
+    <a href="https://chat.whatsapp.com/HVyxEZO6tGG7CrAiJrWu7T" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+    
+    <script src="/public/after cheking.js"></script>
+</body>
+</html>
