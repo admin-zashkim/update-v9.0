@@ -319,18 +319,15 @@ img{
 
 
 
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+footer {
+  position: absolute;
+  bottom: 1px;
   width: 100%;
   display: flex;
   justify-content: center;
-  background: linear-gradient(90deg,#550404, #4b0808);
-  padding: 6px;
-  z-index: 999;
+  background:linear-gradient(90deg,#550404, #4b0808);
+  padding: 10px;
 }
-
 
 .social-icons {
   display: flex;
@@ -365,4 +362,4 @@ img{
   transform: scale(1.2);
   text-shadow: 0 0 10px currentColor;
 }
-   
+
