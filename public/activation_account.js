@@ -193,7 +193,7 @@ cancleBtnMain.addEventListener("click", ()=>{
 })
 
 adminDiv.addEventListener("click", ()=>{
-    window.open(`https://wa.me/254796182560`, '_blank');
+    window.open(`https://wa.me/254771151066`, '_blank');
 })
 
 groupDiv.addEventListener("click", ()=> {
