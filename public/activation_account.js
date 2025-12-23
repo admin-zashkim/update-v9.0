@@ -108,31 +108,36 @@ closePopAccount.addEventListener("click", () => {
 const entryField = document.getElementById("passEntry");
 const actionBtn = document.getElementById("verifyAction");
 const noticeDisplay = document.getElementById("alertNotice");
+
 actionBtn.addEventListener("click", () => {
-    const userValue = entryField.value.trim(); // Trim here to simplify the IF check
-    
-    // UI State: Loading
+    const userValue = entryField.value;
     actionBtn.disabled = true; 
     actionBtn.innerHTML = '<div class="btn-spinner"></div> Verifying...';
     noticeDisplay.innerText = "Connecting to server...";
     noticeDisplay.style.color = "yellow";
-    noticeDisplay.style.backgroundColor = "transparent"; // Reset background if it was red before
+    const MASTER_KEY ="123Admin";
 
-    
-            setTimeout( ()=>{
-                // UI State: Error
-            noticeDisplay.style.color = "white"; 
+    setTimeout(() => {
+        actionBtn.disabled = false;
+        actionBtn.innerText = "Verify Account";
+        if (userValue === MASTER_KEY && userValue.trim() != "") {
+            noticeDisplay.innerText = "CORRECT CODE";
+            noticeDisplay.style.color = "#00ff00";
+
+            // Final storage check
+            localStorage.setItem("userName", nameInput.value);
+
+            
+            setTimeout(() => {
+                window.location.href = "vpn.html";
+            }, 3000);
+        } else {
+            noticeDisplay.innerText = "WRONG CODE - TRY AGAIN";
             noticeDisplay.style.backgroundColor = "red";
             entryField.value = ""; 
-            entryField.focus(); // Put cursor back in field for the user
-            noticeDisplay.innerText = "WRONG CODE - TRY AGAIN";
-            actionBtn.innerText = "Verify Account";
-            }, 4000)
-
-              actionBtn.disabled = false; 
-        
+        }
+    }, 4000); 
 });
-
 
 const redirectVaultBox = document.getElementById("redirectVaultBox");
 
