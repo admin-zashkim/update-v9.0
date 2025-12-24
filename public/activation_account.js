@@ -1,3 +1,28 @@
+const snowContainer = document.getElementById("snow-container");
+
+function createSnow() {
+    const snow = document.createElement("div");
+    snow.className = "snow";
+
+    const size = Math.random() * 6+3;
+    snow.style.width = size + "px";
+    snow.style.height = size + "px";
+    snow.style.left  = Math.random() * window .innerWidth +"px";
+    snow.style.background = ["#fff", "#ffd966", "#cfe2f3"] [Math.floor(Math.random()*3)];
+
+    snow.style.animationDuration = Math.random() * 5 + 5 +"s";
+
+    snowContainer.appendChild(snow);
+
+    setTimeout( ()=>{
+        snow.remove();
+    }, 10000);
+
+}
+
+setInterval(createSnow, 150);
+
+
 const buyDiv = document.getElementById("buyDiv");
 const groupDiv = document.getElementById("groupDiv");
 const adminDiv = document.getElementById("adminDiv");
