@@ -1,6 +1,31 @@
 // =========================
 // FLIP BETWEEN SIGN IN ↔ SIGN UP
 // =========================
+
+const snowContainer = document.getElementById("snow-container");
+
+function createSnow() {
+    const snow = document.createElement("div");
+    snow.className = "snow";
+
+    const size = Math.random() * 6+3;
+    snow.style.width = size + "px";
+    snow.style.height = size + "px";
+    snow.style.left  = Math.random() * window .innerWidth +"px";
+    snow.style.background = ["#fff", "#ffd966", "#cfe2f3"] [Math.floor(Math.random()*3)];
+
+    snow.style.animationDuration = Math.random() * 5 + 5 +"s";
+
+    snowContainer.appendChild(snow);
+
+    setTimeout( ()=>{
+        snow.remove();
+    }, 10000);
+
+}
+
+setInterval(createSnow, 150);
+
 const authBox = document.getElementById("authBox");
 const toSignUp = document.getElementById("toSignUp");
 const toSignIn = document.getElementById("toSignIn");
@@ -82,3 +107,4 @@ signinForm.addEventListener("submit", (e) => {
         window.location.href = "site.html"; // create dashboard.html for testing
     }, 1000);
 });
+
